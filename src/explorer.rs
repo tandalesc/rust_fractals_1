@@ -126,7 +126,7 @@ impl EventHandler for Explorer {
         // limit to 60 fps
         while timer::check_update_time(ctx, DESIRED_FPS) {
             if self.update_screen {
-                self.fill_image_buffer_pt()?;
+                self.fill_image_buffer()?;
                 self.update_screen = false;
             }
         }
